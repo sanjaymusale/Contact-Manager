@@ -1,0 +1,6 @@
+swagger.io --> api documnetation tool
+
+instance methods and static methods are two types of methods at class level
+
+
+to validate use npm package called validator.js

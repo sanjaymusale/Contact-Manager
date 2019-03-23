@@ -1,0 +1,27 @@
+1. npm init
+2. npm install --save express 
+3. create index.js file 
+const express = require('express')
+const app = express() 
+const port = 3000
+app.get('/', (req, res) => {
+    res.send('Welcome to the Contact Manager')
+})
+app.listen(port, () => {
+    console.log('Listening to port 3000')
+})
+4. setup database 
+    npm install --save mongoose 
+5. in index.js file 
+  const mongoose = require('mongoose')
+6. DB Configuration 
+// DB CONFIGURATION
+// telling mongoose to use es6's promise library
+mongoose.Promise = global.Promise 
+mongoose.connect('mongodb://localhost:27017/contact-manager-nov', { useNewUrlParser: true })
+    .then(() => {
+        console.log('connected to db')
+    })
+    .catch((err) => {
+        console.log('Error connecting to DB', err)
+    })
