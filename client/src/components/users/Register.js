@@ -116,21 +116,21 @@ class Register extends React.Component {
 
                             <Label for="name"></Label>
                             <Input type="text" name="name" value={this.state.name} onChange={this.NameChange} placeholder="Username" />
-                            <FormText className="text-danger">{this.state.nameError}</FormText>
+                            <p style={{ fontSize: '13px' }} className="text-danger">{this.state.nameError}</p>
 
 
 
 
                             <Label for="email"></Label>
                             <Input type="email" name="email" value={this.state.email} onChange={this.emailChange} placeholder="Email" />
-                            <FormText color="">{this.state.emailError}</FormText>
+                            <p style={{ fontSize: '13px' }} className="text-danger">{this.state.emailError}</p>
 
 
 
 
                             <Label for="password"></Label>
                             <Input type="password" name="password" value={this.state.password} onChange={this.passwordChange.bind(this)} placeholder="password" />
-                            <FormText color="">{this.state.passwordError}</FormText>
+                            <p style={{ fontSize: '13px' }} className="text-danger">{this.state.passwordError}</p>
                             <FormGroup></FormGroup>
                             <Col>
                                 <p className="text-center"><Button color="primary" size="lg" block>Register</Button></p>

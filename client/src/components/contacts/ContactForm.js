@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 export default
     class ContactForm extends React.Component {
     constructor(props) {
@@ -94,19 +94,19 @@ export default
                         <Label>
                             Name :</Label>
                         <Input type="text" value={this.state.name} onChange={this.handleName} />
-                        <FormText className="text-danger">{this.state.nameError}</FormText>
+                        <p className="text-danger" style={{ fontSize: '13px' }} >{this.state.nameError}</p>
                     </FormGroup>
                     <FormGroup>
                         <Label>
                             Email :</Label>
                         <Input type="email" value={this.state.email} onChange={this.handleEmail} />
-                        <FormText className="text-danger">{this.state.emailError}</FormText>
+                        <p style={{ fontSize: '13px' }} className="text-danger">{this.state.emailError}</p>
                     </FormGroup>
                     <FormGroup>
                         <Label>
                             Mobile :</Label>
                         <Input type="text" value={this.state.mobile} onChange={this.handleMobile.bind(this)} />
-                        <FormText className="text-danger">{this.state.mobileError}</FormText>
+                        <p style={{ fontSize: '13px' }}  className="text-danger">{this.state.mobileError}</p>
                     </FormGroup>
                     <FormGroup>
                         <p className="text-right">

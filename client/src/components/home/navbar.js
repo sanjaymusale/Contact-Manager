@@ -35,8 +35,7 @@ const Navbar = (props) => {
                                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                                 <Link to="/contacts/new" className="dropdown-item">New Contact</Link>
                                                 <Link to="/contacts" className="dropdown-item" >View Contacts</Link>
-                                                <div className="dropdown-divider"></div>
-                                                <Link to="/user" className="dropdown-item" >Something else here</Link>
+
                                             </div>
                                         </li>
                                         <li className="nav-item active">

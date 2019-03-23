@@ -109,12 +109,12 @@ class Login extends React.Component {
                             <FormGroup>
                                 <Label for="email"></Label>
                                 <Input type="email" name="email" value={this.state.email} onChange={this.emailChange} placeholder="Email" />
-                                <FormText color="">{this.state.emailError}</FormText>
+                                <p style={{ fontSize: '13px' }} className="text-danger">{this.state.emailError}</p>
                             </FormGroup>
                             <FormGroup>
                                 <Label for="password"></Label>
                                 <Input type={this.state.toggle ? "text" : "password"} name="password" value={this.state.password} onChange={this.passwordChange.bind(this)} placeholder="Password" />
-                                <FormText color="">{this.state.passwordError}</FormText>
+                                <p style={{ fontSize: '13px' }} className="text-danger">{this.state.passwordError}</p>
                             </FormGroup>
                             <FormGroup>
                                 <FormText><input type="checkbox" name="toggle" onChange={this.showpass} />   Show Password</FormText>
