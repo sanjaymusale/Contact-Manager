@@ -5,7 +5,7 @@ import { Route, Redirect } from 'react-router-dom'
 const PrivateRoute = (props) => {
 
     const { component: Component, ...rest } = props
-    console.log('pro', props)
+    // console.log('pro', props)
     const { user } = props
     return (
 

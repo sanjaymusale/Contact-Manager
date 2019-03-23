@@ -19,7 +19,7 @@ import PrivateRoute from './components/home/protected'
 class App extends React.Component {
 
   render() {
-    console.log('app', this.props)
+    // console.log('app', this.props)
     const style = {
       background: '#f2f2f2',
       height: '550px'
