@@ -19,7 +19,7 @@ export default
     componentDidMount() {
         const id = this.props.match.params.id
         const auth = localStorage.getItem('authToken')
-        console.log('auth', auth)
+
         if (auth) {
             axios.get(`/contact/${id}`, { headers: { 'x-auth': localStorage.getItem('authToken') } })
                 .then((response) => {
@@ -28,6 +28,7 @@ export default
                 })
                 .catch((err) => {
                     console.log(err)
+                    this.componentDidMount()
                 })
         }
         else {
@@ -45,6 +46,7 @@ export default
                 })
                 .catch((err) => {
                     console.log(err)
+                    this.handleDelete()
                 })
         }
     }

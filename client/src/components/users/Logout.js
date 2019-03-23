@@ -12,10 +12,10 @@ class Logout extends React.Component {
     }
 
     componentDidMount() {
-        console.log('compon logout')
+        // console.log('compon logout')
         axios.delete('/user/logout', { headers: { 'x-auth': localStorage.getItem('authToken') } })
             .then((response) => {
-                console.log(response)
+                // console.log(response)
                 this.props.dispatch(setUser({}))
                 localStorage.removeItem('authToken')
 
@@ -23,6 +23,7 @@ class Logout extends React.Component {
             })
             .catch((err) => {
                 console.log(err)
+                this.componentDidMount()
             })
 
     }

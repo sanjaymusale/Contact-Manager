@@ -53,7 +53,7 @@ class Contact extends React.Component {
         const rowB = {
 
         }
-        console.log('contact', this.props)
+        //console.log('contact', this.props)
         return (
 
             <Container>

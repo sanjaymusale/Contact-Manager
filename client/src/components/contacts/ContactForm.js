@@ -79,7 +79,7 @@ export default
                 email: this.state.email,
                 mobile: this.state.mobile
             }
-            console.log('form submit', formData)
+            //console.log('form submit', formData)
             this.props.handleContactSubmission(formData)
         }
     }
@@ -106,7 +106,7 @@ export default
                         <Label>
                             Mobile :</Label>
                         <Input type="text" value={this.state.mobile} onChange={this.handleMobile.bind(this)} />
-                        <p style={{ fontSize: '13px' }}  className="text-danger">{this.state.mobileError}</p>
+                        <p style={{ fontSize: '13px' }} className="text-danger">{this.state.mobileError}</p>
                     </FormGroup>
                     <FormGroup>
                         <p className="text-right">

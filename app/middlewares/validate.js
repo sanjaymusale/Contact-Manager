@@ -1,7 +1,7 @@
 const validator = require('validator')
 
 function validateID(req, res, next) {
-    console.log(req.params)
+    //console.log(req.params)
     if (validator.isMongoId(req.params.id)) {
         next()
     }

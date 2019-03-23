@@ -8,12 +8,12 @@ import axios from '../config/axios-config';
 export default class ContactNew extends React.Component {
 
     handleContactSubmission = (data) => {
-        console.log(data)
+        // console.log(data)
         axios.post('/contact', data,
             { headers: { 'x-auth': localStorage.getItem('authToken') } }
         )
             .then((response) => {
-                console.log(response.data)
+                // console.log(response.data)
                 const contact = response.data
                 this.props.history.push(`/contacts/${contact._id}`)
             })
@@ -22,7 +22,7 @@ export default class ContactNew extends React.Component {
             })
     }
     render() {
-        console.log('contact new', this.props)
+        //console.log('contact new', this.props)
         return (
             <Container>
                 <Row>
