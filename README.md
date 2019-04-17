@@ -1,49 +1,44 @@
 # Contact Manager
 
 # Overview
-Online Auction is a Live Bidding platform built on ReactJS, ExpressJs and Node, where users can bid for any Products. This provides user to add his product along with the images , Once the Product get Approval from Admin , user can provide Date and Time for the Bidding Event to occur, User can bid live on other Products available for Bidding, The code in this repository covers front end and back end of this project.
+Contact Manager is a Online App where user can store his Contact List along with their Email and Mobile Number,
+User can add contact, edit contact and delete the contact
 
 # Dependencies and installation
 *  ### Front End ###
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. axios `npm install --save axios`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. react `npm create-react-app`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. react-router-dom `npm install --save react-router-dom`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. socket.io-client `npm i socket.io-client`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. redux `npm i redux`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6. react-redux `npm i react-redux`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7. moment `npm i moment`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8. material-ui/core `npm i @material-ui/core`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9. material-ui/icons `npm i @material-ui/icons`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10. material-table `npm i material-table`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10. material-ui-pickers `npm i material-ui-pickers`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. redux `npm i redux`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. react-redux `npm i react-redux`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6. react-bootstrap `npm i react-bootstrap`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7. reactstrap `npm i reactstrap`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8. lodash `npm i lodash`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9. jwt-decode `npm i jwt-decode`<br/>
 
 *  ### Back End ###
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. cors `npm i cors`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. express `npm i express`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. mongoose `npm  mongoose`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. nodemon `npm i nodemon`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. socket-io `npm i socket-io`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6. multer `npm i multer`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7. bcryptjs `npm i bcryptjs`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8. jsonwebtoken `npm i jsonwebtoken`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8. validator `npm i validator`<br/>
 
 # Usage
-## `create, edit and delete Product` ##
+## `create, edit and delete Contact` ##
 
-* Products
-  * See the list of Products, to see more about each Product click on details.
-* Add Product
-  * Add a new Product to be listed for auctioning, with the Description and Images of the Product
-* Edit Product
-  * Change the Product Description,Name and Category
-* Delete Product
-  * Can Delete the Product
+* Contacts
+  * See the list of Contacts, to see more about each Product click on name.
+* Add Contact
+  * Add a new Contact, with the Name, EmailId, Mobile no of the Person
+* Edit Contact
+  * Change the Contact Name, Email and Mobile no.
+* Delete Contact
+  * Can Delete the Contact
   
-## `add date and time slot for auctioning` ##
-* Add Date and Time
-  * Each product is made available a time slot during which the product will be available for Bidding
-  
-  
+ # Author
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. Sanjay Musale
 
 
 
