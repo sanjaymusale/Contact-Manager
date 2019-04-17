@@ -66,21 +66,18 @@ class Login extends React.Component {
             axios.post('/user/login', formData)
                 .then((response) => {
                     // console.log(response)
-                    if (response.data.error) {
-                        // console.log('error')
-                        this.setState(() => ({ loginFail: true }))
-                    }
-                    else {
-                        // console.log('m=success', jwtDecode(response.data))
-                        localStorage.setItem('authToken', response.data)
-                        this.props.dispatch(setUser(jwtDecode(response.data)))
-                        this.setState(() => ({ redirect: true }))
-                    }
+
+                    // console.log('m=success', jwtDecode(response.data))
+                    localStorage.setItem('authToken', response.data)
+                    this.props.dispatch(setUser(jwtDecode(response.data)))
+                    this.setState(() => ({ redirect: true }))
+
 
 
                 })
                 .catch((err) => {
-                    console.log(err)
+                    console.log(err.response.data)
+                    this.setState(() => ({ loginFail: true }))
                 })
         }
     }
@@ -93,7 +90,7 @@ class Login extends React.Component {
     render() {
         return (
             <div className="container">
-                {this.state.redirect && <Redirect to='/user' />}
+                {this.state.redirect && this.props.history.push('/user')}
                 <br />
                 <div className="row">
                     <div className="col">

@@ -39,10 +39,12 @@ router.post('/login', (req, res) => {
             return user.generateToken()
         })
         .then((response) => {
+            console.log('response', response)
             res.send(response)
         })
         .catch((err) => {
-            res.send(err)
+            console.log(err)
+            res.status(400).send('error')
         })
 })
 
