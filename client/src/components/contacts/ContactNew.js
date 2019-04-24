@@ -14,8 +14,8 @@ export default class ContactNew extends React.Component {
         )
             .then((response) => {
                 console.log(response.data)
-                // const contact = response.data
-                // this.props.history.push(`/contacts/${contact._id}`)
+                const contact = response.data
+                this.props.history.push(`/contacts/${contact._id}`)
             })
             .catch((err) => {
                 console.log(err)
