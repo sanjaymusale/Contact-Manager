@@ -43,20 +43,17 @@ export default
             isError = true
             error.mobileError = 'Please Provide Mobile Number'
         }
-        if (this.state.mobile.length <= 9) {
+
+        if (this.state.mobile.length > 0) {
+          let re = new RegExp("^([987]{1})([0123456789]{1})([0-9]{8})$")
+          if(!re.test(this.state.mobile))
+          {
             isError = true
-            error.mobileError = 'Provide valid Number'
-        }
-        if (this.state.mobile.length > 10) {
-            isError = true
-            error.mobileError = 'Provide valid Number'
-        }
-        if((this.state.mobile.length > 0)){
-          if(!validator.isNumeric(this.state.mobile)){
-            isError = true
-            error.mobileError = 'Provide valid Number'
+            error.mobileError = 'Provide valid Number starts with 9,8,7'
           }
+
         }
+
 
         this.setState(() => ({
             ...this.state,
