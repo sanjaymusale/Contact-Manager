@@ -13,7 +13,7 @@ export default class ContactNew extends React.Component {
             { headers: { 'x-auth': localStorage.getItem('authToken') } }
         )
             .then((response) => {
-                console.log(response.data)
+              //  console.log(response.data)
                 const contact = response.data
                 this.props.history.push(`/contacts/${contact._id}`)
             })
