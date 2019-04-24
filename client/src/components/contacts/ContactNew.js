@@ -13,9 +13,9 @@ export default class ContactNew extends React.Component {
             { headers: { 'x-auth': localStorage.getItem('authToken') } }
         )
             .then((response) => {
-                // console.log(response.data)
-                const contact = response.data
-                this.props.history.push(`/contacts/${contact._id}`)
+                console.log(response.data)
+                // const contact = response.data
+                // this.props.history.push(`/contacts/${contact._id}`)
             })
             .catch((err) => {
                 console.log(err)
@@ -40,4 +40,3 @@ export default class ContactNew extends React.Component {
         )
     }
 }
-

@@ -71,7 +71,7 @@ class Login extends React.Component {
             // console.log(formData)
             axios.post('/user/login', formData)
                 .then((response) => {
-                    console.log(response)
+                    //console.log(response)
 
                     // console.log('m=success', jwtDecode(response.data))
                     localStorage.setItem('authToken', response.data)
@@ -111,7 +111,7 @@ class Login extends React.Component {
 
                             <FormGroup>
                                 <Label for="email"></Label>
-                                <Input type="email" name="email" value={this.state.email} onChange={this.emailChange} placeholder="Email" />
+                                <Input type="text" name="email" value={this.state.email} onChange={this.emailChange} placeholder="Email" />
                                 <p style={{ fontSize: '13px' }} className="text-danger">{this.state.emailError}</p>
                             </FormGroup>
                             <FormGroup>
