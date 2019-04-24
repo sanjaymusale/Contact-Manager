@@ -96,7 +96,7 @@ class Register extends React.Component {
 
             axios.post('/user/register', formData)
                 .then((response) => {
-                  console.log(response.data)
+                  //console.log(response.data)
                     if(response.data.notice){
                       this.props.history.push('/user/login')
                       this.setState(() => ({

@@ -82,7 +82,7 @@ class Login extends React.Component {
 
                 })
                 .catch((err) => {
-                    console.log(err.response.data)
+                    //console.log(err.response.data)
                     this.setState(() => ({ loginFail: true }))
                 })
         }
