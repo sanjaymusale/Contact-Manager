@@ -59,7 +59,7 @@ class Contact extends React.Component {
             <Container>
                 <br />
                 <Row style={rowB}>
-                    <Col > <h2> Listing Contacts - <Badge color="info">{this.state.contacts.length}</Badge> </h2></Col>
+                    <Col > <h2> Listing Contacts - <Badge color="info">{this.state.filterData.length}</Badge> </h2></Col>
                     <Col ><SearchBar searchFilter={this.searchFilter} /></Col>
                     <Col > <Link className="btn btn-primary" to='/contacts/new' role="button">New Contact</Link></Col>
 

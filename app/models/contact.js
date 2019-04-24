@@ -27,6 +27,7 @@ const contactSchema = new Schema({
     },
     email: {
         type: String,
+        unique:true,
         validate: {
             validator: function (value) {
                 if (validator.isEmpty(value)) {
@@ -57,6 +58,3 @@ const Contact = mongoose.model('Contact', contactSchema)
 module.exports = {
     Contact
 }
-
-
-

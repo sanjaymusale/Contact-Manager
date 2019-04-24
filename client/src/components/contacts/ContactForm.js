@@ -1,5 +1,5 @@
 import React from 'react'
-
+import validator from 'validator'
 import { Link } from 'react-router-dom'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 export default
@@ -28,13 +28,16 @@ export default
             isError = true
             error.nameError = 'Please Provide Name'
         }
-        if (this.state.email.length === 0) {
+        if (this.state.email.length > 0) {
+          if(!validator.isEmail(this.state.email)){
             isError = true
-            error.emailError = 'Please Provide email  '
+            error.emailError = 'Please Provide valid Email'
+          }
+
         }
-        if (this.state.name.length < 5) {
+        if (this.state.name.length < 3) {
             isError = true
-            error.nameError = 'Must contain min 5 Character  '
+            error.nameError = 'Must contain min 3 Character  '
         }
         if (this.state.mobile.length === 0) {
             isError = true
@@ -47,6 +50,12 @@ export default
         if (this.state.mobile.length > 10) {
             isError = true
             error.mobileError = 'Provide valid Number'
+        }
+        if((this.state.mobile.length > 0)){
+          if(!validator.isNumeric(this.state.mobile)){
+            isError = true
+            error.mobileError = 'Provide valid Number'
+          }
         }
 
         this.setState(() => ({
@@ -99,7 +108,7 @@ export default
                     <FormGroup>
                         <Label>
                             Email :</Label>
-                        <Input type="email" value={this.state.email} onChange={this.handleEmail} />
+                        <Input type="text" value={this.state.email} onChange={this.handleEmail} />
                         <p style={{ fontSize: '13px' }} className="text-danger">{this.state.emailError}</p>
                     </FormGroup>
                     <FormGroup>
@@ -122,4 +131,3 @@ export default
         )
     }
 }
-

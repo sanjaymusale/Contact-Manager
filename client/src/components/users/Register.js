@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from '../config/axios-config';
-import { Button, Form, FormGroup, Label, Input, FormText, Col } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Col, Alert } from 'reactstrap';
+import isEmail from 'validator/lib/isEmail'
 
 class Register extends React.Component {
     constructor() {
@@ -12,6 +13,7 @@ class Register extends React.Component {
             nameError: '',
             emailError: '',
             passwordError: '',
+            failure:false
         }
         //handle this binding in the constructor
         this.emailChange = this.emailChange.bind(this)
@@ -33,10 +35,17 @@ class Register extends React.Component {
             isError = true
             error.emailError = 'Please Provide email  '
         }
-        if (this.state.name.length > 0 && this.state.name.length < 6) {
+        if(this.state.email.length > 0){
+          if(!isEmail(this.state.email)){
             isError = true
-            error.nameError = 'Must contain min 6 Character  '
+            error.emailError = 'Provide valid Email'
+          }
         }
+        if (this.state.name.length > 0 && this.state.name.length < 3) {
+            isError = true
+            error.nameError = 'Must contain min 3 Character'
+        }
+
 
         if (this.state.password.length === 0) {
             isError = true
@@ -87,12 +96,20 @@ class Register extends React.Component {
 
             axios.post('/user/register', formData)
                 .then((response) => {
-                    this.props.history.push('/user/login')
-                    this.setState(() => ({
-                        name: '',
-                        email: '',
-                        password: ''
-                    }))
+                  console.log(response.data)
+                    if(response.data.notice){
+                      this.props.history.push('/user/login')
+                      this.setState(() => ({
+                          name: '',
+                          email: '',
+                          password: '',
+                      }))
+                    }else {
+                      this.setState(() => ({
+                        failure:true
+                      }))
+                    }
+
                 })
                 .catch((err) => {
                     console.log(err)
@@ -111,6 +128,9 @@ class Register extends React.Component {
                     <div className="col border border-primary shadow-lg p-3 mb-5 bg-white rounded p-4 m-4">
 
                         <p className="h3 text-center">Register</p>
+                        {this.state.failure && <Alert color="warning">
+                          Email already Registered
+                        </Alert>}
                         <Form className='form' onSubmit={this.submitHandle} >
 
 
@@ -148,4 +168,3 @@ class Register extends React.Component {
 }
 
 export default Register
-

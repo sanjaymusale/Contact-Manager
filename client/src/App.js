@@ -12,7 +12,6 @@ import Logout from "./components/users/Logout"
 import NavBar from "./components/home/navbar";
 import Dashboard from "./components/contacts/Dashboard";
 import Footer from "./components/home/footer"
-import { connect } from 'react-redux'
 import PrivateRoute from './components/home/protected'
 
 

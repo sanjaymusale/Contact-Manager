@@ -1,8 +1,7 @@
 import React from 'react'
 import axios from '../config/axios-config';
 import jwtDecode from 'jwt-decode'
-
-import { Redirect } from 'react-router-dom'
+import isEmail from 'validator/lib/isEmail'
 import { connect } from "react-redux";
 import { setUser } from '../../actions/users'
 import { Button, Form, FormGroup, Label, Input, FormText, Alert } from 'reactstrap';
@@ -32,6 +31,13 @@ class Login extends React.Component {
         if (this.state.email.length === 0) {
             isError = true
             error.emailError = 'Please Provide email  '
+        }
+        if (this.state.email.length > 0) {
+          if(!isEmail(this.state.email)){
+            isError = true
+            error.emailError = 'Please Provide valid email'
+          }
+
         }
 
         if (this.state.password.length === 0) {
@@ -65,7 +71,7 @@ class Login extends React.Component {
             // console.log(formData)
             axios.post('/user/login', formData)
                 .then((response) => {
-                    // console.log(response)
+                    console.log(response)
 
                     // console.log('m=success', jwtDecode(response.data))
                     localStorage.setItem('authToken', response.data)
